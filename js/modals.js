@@ -158,10 +158,7 @@ function cleanActiveSvg() {
     for (let rect of allRects) {
         rect.classList.remove("active-ecopoint");
     }
- 
- 
 }
-
 
 fetchLieuxInterets();
 fetchEcopoints();
@@ -228,11 +225,11 @@ const buttonParking = document.getElementById("btn-parkings");
 const buttonPromenade = document.getElementById("btn-promenades");
 
 function toggleMapIcons(buttonDom, listIconsName) {
-    const icons = document.querySelectorAll(`#${listIconsName}`);
-
     buttonDom.addEventListener("click", () => {
-        icons.forEach((busIcon) => {
-            for (const el of busIcon.children) {
+
+    document.querySelectorAll(`#${listIconsName}`).forEach((icon) => {
+            for (const el of icon.children) {
+                console.log(el);
                 el.classList.toggle('hide');
             }
         })
