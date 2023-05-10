@@ -1,0 +1,91 @@
+[
+    {
+      "id": "lieu_interet1",
+      "titre": "Mairie",
+      "desc": "description du lieu d'intêret 1",
+      "image": "place-mairie-1.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet2",
+      "titre": "Bibliothèque",
+      "desc": "08:00 - 12:00 14:00 - 17:00 du Lun au Ven",
+      "image": "bibliotheque.jpg",
+      "url": "https://troinex.ch/vivre-ici/activites/bibliotheque/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet3",
+      "titre": "Salle de fêtes",
+      "desc": "description du lieu d'intêret 3",
+      "image": "salle-des-fetes.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet4",
+      "titre": "Ecole",
+      "desc": "description du lieu d'intêret 4",
+      "image": "ecole-2.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet5",
+      "titre": "Eglise catholique",
+      "desc": "description du lieu d'intêret 5",
+      "image": "eglise.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet6",
+      "titre": "Ferme Rosset et jardin d’enfant",
+      "desc": "description du lieu d'intêret 6",
+      "image": "ferme-rosset-exterieur.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet7",
+      "titre": "Centre de voirie/service du feu",
+      "desc": "description du lieu d'intêret 7",
+      "image": "placeholder.png",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet8",
+      "titre": "Centre sportif",
+      "desc": "description du lieu d'intêret 8",
+      "image": "place-sports-et-jeux.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet9",
+      "titre": "Crèche",
+      "desc": "description du lieu d'intêret 9",
+      "image": "placeholder.png",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet10",
+      "titre": "Temple protestant",
+      "desc": "description du lieu d'intêret 10",
+      "image": "eglise-protestante.png",
+      "url": "https://troinex.ch/",
+      "show": false
+    },
+    {
+      "id": "lieu_interet11",
+      "titre": "Eglise Arménienne",
+      "desc": "description du lieu d'intêret 11",
+      "image": "eglise-armenienne.jpg",
+      "url": "https://troinex.ch/",
+      "show": false
+    }
+  ]
+  

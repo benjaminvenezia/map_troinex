@@ -1,0 +1,170 @@
+[
+	{
+		"id": "ecopoint1",
+		"titre": "Salle des fêtes",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg", "pile.svg", "capsule.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint2",
+		"titre": "Place de la Mairie",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint3",
+		"titre": "Chemin de la Mairie - Epicerie",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint4",
+		"titre": "École de Troinex",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint5",
+		"titre": "Chemin Lullin",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint6",
+		"titre": "Chemin Dottrens",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint7",
+		"titre": "Chemin de Roday",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint8",
+		"titre": "Chemin Fondelle – Chaumière",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint9",
+		"titre": "Chemin Dottrens",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg", "alu.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint10",
+		"titre": "Chemin Dottrens 20",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["textile.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint11",
+		"titre": "Chemin Champ-Carré",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg", "textile.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint12",
+		"titre": "Chemin de Saussac",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint13",
+		"titre": "Chemin du Claiset",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg", "alu.svg", "compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint14",
+		"titre": "Église Arménienne",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["pet.svg", "verre.svg", "textile.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint15",
+		"titre": "Chemin de Drize - Eclaireurs",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint16",
+		"titre": "Chemin des Moulins-de-Drize",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint17",
+		"titre": "Chemin des Moulins-de-Drize",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint18",
+		"titre": "Chemin des Saules",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint19",
+		"titre": "Chemin Sous-le-Crêt",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint20",
+		"titre": "Chemin Sous-le-Crêt",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg", "alu.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint21",
+		"titre": "Route de Bossey",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint22",
+		"titre": "Route de Bossey – Parapente",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint23",
+		"titre": "Route de Bossey",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["compost.svg"],
+        "show": false
+	},
+	{
+		"id": "ecopoint24",
+		"titre": "Chemin Pré-Cosson",
+		"desc": "Pas de dépôt : entre 21h et 7h / les dimanches / les jours fériés",
+		"icons": ["verre.svg", "pet.svg", "papier.svg"],
+        "show": false
+	}
+]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .circle {
+        fill: white;
+      }
+      .cls-1 {
+        fill: none;
+        stroke: white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_75" data-name="Groupe 75">
+    <path id="Tracé_54" data-name="Tracé 54" class="cls-1" d="m1.94,12.5s4.19,6.2,10.49,6.2,10.48-6.2,10.48-6.2c0,0-4.19-6.2-10.48-6.2S1.94,12.5,1.94,12.5Z"/>
+    <path class="circle" d="m12.35,8.36c-2.29,0-4.14,1.86-4.14,4.14s1.86,4.14,4.14,4.14,4.14-1.86,4.14-4.14-1.86-4.14-4.14-4.14Z"/>
+  </g>
+</svg>
