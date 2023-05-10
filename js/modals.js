@@ -229,7 +229,6 @@ function toggleMapIcons(buttonDom, listIconsName) {
 
     document.querySelectorAll(`#${listIconsName}`).forEach((icon) => {
             for (const el of icon.children) {
-                console.log(el);
                 el.classList.toggle('hide');
             }
         })
