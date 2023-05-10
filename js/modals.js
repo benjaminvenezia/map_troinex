@@ -223,10 +223,9 @@ function addEventsOnLocation() {
 const buttonTransports = document.getElementById("btn-transports");
 const buttonLocations = document.getElementById("btn-locations");
 const buttonEcopoints = document.getElementById("btn-ecopoints");
-
-toggleMapIcons(buttonTransports, "TRANSPORTS");
-toggleMapIcons(buttonLocations, "LIEUX_INTERET");
-toggleMapIcons(buttonEcopoints, "ECOPOINTS");
+const buttonParcs = document.getElementById("btn-parcs");
+const buttonParking = document.getElementById("btn-parkings");
+const buttonPromenade = document.getElementById("btn-promenades");
 
 function toggleMapIcons(buttonDom, listIconsName) {
     const icons = document.querySelectorAll(`#${listIconsName}`);
@@ -249,15 +248,24 @@ function hideByDefaultMapIcons(listIconsName) {
     })
 }
 
-hideByDefaultMapIcons("TRANSPORTS");
-
-
 function cleanLocationItemsWhenMouseIsLeaving() {
     const subpanel = document.getElementById('panel-item-locations');
     subpanel.addEventListener("mouseleave", () => {
         cleanPanelLocation();
     })
 }
+
+hideByDefaultMapIcons("TRANSPORTS");
+hideByDefaultMapIcons("PARC_DE_JEUX");
+hideByDefaultMapIcons("PARKING");
+hideByDefaultMapIcons("PROMENADE");
+
+toggleMapIcons(buttonTransports, "TRANSPORTS");
+toggleMapIcons(buttonLocations, "LIEUX_INTERET");
+toggleMapIcons(buttonEcopoints, "ECOPOINTS");
+toggleMapIcons(buttonParcs, "PARC_DE_JEUX");
+toggleMapIcons(buttonParking, "PARKING");
+toggleMapIcons(buttonPromenade, "PROMENADE");
 
 
 addEventOnPanelItems()

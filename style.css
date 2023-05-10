@@ -170,6 +170,7 @@ a {
 }
 
 .button-container {
+	display: flex;
     position: fixed;
     z-index: 999;
     bottom: 10px;
@@ -177,16 +178,28 @@ a {
 }
 
 .button-container .button {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    font-size: 28px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 38px;
+    height: 38px;
+    font-size: 30px;
     line-height: 28px;
-    border: 1px solid;
     text-align: center;
     background: #0078C1;
     color: var(--text);
 }
+
+#zoomIn {
+	border-radius: 10px 0 0 10px;
+	margin-right: 1px;
+}
+
+#zoomOut {
+	border-radius: 0 10px 10px 0;
+}
+
+
 /* rest */
 .hide {
 	display: none !important;
