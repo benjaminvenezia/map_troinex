@@ -10,7 +10,7 @@
 	--color-card-lieu_interet: rgb(29, 29, 29);
 
 	--bg-active-ecopoint: rgb(0, 88, 21);
-	--bg-active-lieux_interet: rgb(25, 36, 255);
+	--bg-active-lieux_interet: #005082;
 	--bg-active-transport: #411f00;
 
 	--icon-close-color-lieux_interet: rgb(255, 94, 94);
@@ -63,7 +63,11 @@ body {
 	cursor: pointer;
 	position: absolute;
 	top: 20px;
-	right: 0;
+	right: -40px;
+
+	padding: 15px;
+	border-radius: 100%;
+	border: 1px solid white;
 }
 
 #container-show-panel {
@@ -79,14 +83,14 @@ body {
 
 #icon-hide-panel {
 	fill: white;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 }
 
 #icon-show-panel {
 	fill: white;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 }
 
 #panel {
