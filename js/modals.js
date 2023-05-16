@@ -321,8 +321,9 @@ fetchAndShowIcons();
 async function fetchIconsSettedToTrue() {
     const ecopointsFocused = await ecopoints_liste.filter((ecopoint) => ecopoint.show === true);
     const lieuxInteretFocused = await lieux_interet_liste.filter((lieuInteret) => lieuInteret.show === true);
+    const transportsFocused = await transports_liste.filter((transport) => transport.show === true);
 
-    const all = ecopointsFocused.concat(lieuxInteretFocused);
+    const all = ecopointsFocused.concat(lieuxInteretFocused, transportsFocused);
     const ids = all.map((el) => el.id);
 
     for (const ecopointNode of ecopoints) {
@@ -337,10 +338,16 @@ async function fetchIconsSettedToTrue() {
         }
     }
 
+    for (const transportNode of transports) {
+        if (ids.includes(transportNode.id)) {
+            transportNode.classList.add("helper-focus");
+        }
+    }
+
     return all;
 }
 async function fetchAndShowIcons() {
-    await Promise.all([fetchLieuxInterets(), fetchEcopoints()]).then(() => {
+    await Promise.all([fetchLieuxInterets(), fetchEcopoints(), fetchTransports()]).then(() => {
         fetchIconsSettedToTrue();
     });
 }
