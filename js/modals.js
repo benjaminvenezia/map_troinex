@@ -1,6 +1,7 @@
 /* ------------------------------------------------   MAP   ------------------------------------------------ */
 let lieux_interet_liste;
 let ecopoints_liste;
+let transports_liste;
 
 async function fetchData(url) {
     const response = await fetch(url);
@@ -8,26 +9,26 @@ async function fetchData(url) {
     return data;
 }
 
-async function fetchLieuxInterets() {
-    lieux_interet_liste = await fetchData("./data/lieux_interet.json");
-}
-
-async function fetchEcopoints() {
-    ecopoints_liste = await fetchData("./data/ecopoints.json");
-}
+async function fetchLieuxInterets() { lieux_interet_liste = await fetchData("./data/lieux_interet.json"); }
+async function fetchEcopoints() { ecopoints_liste = await fetchData("./data/ecopoints.json"); }
+async function fetchTransports() { transports_liste = await fetchData("./data/transports.json"); }
 
 const lieux_interet = document.querySelector("#LIEUX_INTERET").children;
 const ecopoints = document.querySelector("#ECOPOINTS").children;
+const transports = document.querySelector("#TRANSPORTS").children;
 
 const modal_lieu_interet = document.querySelector(".lieu_interet_modal");
 const modal_ecopoint = document.querySelector(".ecopoint_modal");
+const modal_transport = document.querySelector(".transport_modal");
 
 function moveModalToCursor(event, modal) {
     const modalPointer = document.querySelector(".modal_pointer");
     const modalEcopointPointer = document.querySelector(".ecopoint_modal_pointer");
+    const modalTransportsPointer = document.querySelector(".transport_modal_pointer");
 
     modalPointer.classList.remove("modal_pointer--reversed");
     modalEcopointPointer.classList.remove("ecopoint_modal_pointer--reversed");
+    modalTransportsPointer.classList.remove("transport_modal_pointer--reversed");
 
     const posX = event.clientX;
     const posY = event.clientY;
@@ -37,6 +38,7 @@ function moveModalToCursor(event, modal) {
 
     const isModalLieuInteretOut = isModalGoingOutOfScreen(modal_lieu_interet);
     const isModalEcopointOut = isModalGoingOutOfScreen(modal_ecopoint);
+    const isModalTransportOut = isModalGoingOutOfScreen(modal_transport);
 
     if (isModalLieuInteretOut) {
         modalPointer.classList.add("modal_pointer--reversed");
@@ -44,6 +46,11 @@ function moveModalToCursor(event, modal) {
     }
 
     if (isModalEcopointOut) {
+        modalEcopointPointer.classList.add("ecopoint_modal_pointer--reversed");
+        modal.style.left = `${posX - 400}px`;
+    }
+
+    if (isModalTransportOut) {
         modalEcopointPointer.classList.add("ecopoint_modal_pointer--reversed");
         modal.style.left = `${posX - 400}px`;
     }
@@ -121,6 +128,31 @@ function addEventOnLieuxInteret() {
     }
 }
 
+function addEventOnTransports() {
+    for (let transport of transports) {
+        transport.addEventListener("click", (event) => {
+            hideModales();
+            cleanActiveSvg();
+
+            const circles = transport.getElementsByTagName("circle");
+
+            for (let circle of circles) {
+                circle.classList.add("active");
+            }
+
+            const { titre } = transports_liste.find((item) => item.id === transport.id);
+            
+            modal_transport.classList.remove("hide");
+            let modal_titre = modal_transport.querySelector(".transport_titre");
+
+            modal_titre.textContent = titre;
+            // modal_desc.textContent = desc;
+
+            moveModalToCursor(event, modal_transport);
+        });
+    }
+}
+
 
 function closeModale() {
     const lieu_interet_icon = document.getElementById("lieu_interet_modal_close_icon");
@@ -138,13 +170,23 @@ function closeEcopointModale() {
     });
 }
 
+function closeTransportModale() {
+    const transport_icon = document.getElementById("transport_modal_close_icon");
+    transport_icon.addEventListener("click", () => {
+        modal_transport.classList.add("hide");
+        cleanActiveSvg();
+    });
+}
+
 function hideModales() {
     cleanActiveSvg();
     const modal_lieu_interet = document.querySelector(".lieu_interet_modal");
     const modal_ecopoint = document.querySelector(".ecopoint_modal");
+    const modal_transport = document.querySelector(".transport_modal");
     //put all modales you need to hide
     modal_lieu_interet.classList.add("hide");
     modal_ecopoint.classList.add("hide");
+    modal_transport.classList.add("hide");
 }
 
 function cleanActiveSvg() {
@@ -162,10 +204,13 @@ function cleanActiveSvg() {
 
 fetchLieuxInterets();
 fetchEcopoints();
+fetchTransports();
 addEventOnLieuxInteret();
 addEventOnEcopoints();
+addEventOnTransports();
 closeModale();
 closeEcopointModale();
+closeTransportModale();
 
 
 /* ------------------------------------------------   Panel  ------------------------------------------------ */

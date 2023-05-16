@@ -6,6 +6,7 @@
 
 	--bg-card-ecopoint: #86bc25;
 	--bg-card-lieu_interet: white;
+	--bg-card-transport: #ed7607;
 	--color-card-lieu_interet: rgb(29, 29, 29);
 
 	--bg-active-ecopoint: rgb(0, 88, 21);
@@ -341,6 +342,80 @@ a {
 }
 
 .active-ecopoint {
+	fill: var(--bg-active-ecopoint) !important;
+}
+
+
+/* TRANSPORTS */
+#TRANSPORTS {
+	cursor: pointer;
+}
+.transport_modal {
+	position: absolute;
+	z-index: 1000000;
+	width: 300px;
+	padding: 10px;
+	background-color: var(--bg-card-transport);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.373);
+	animation: fadein 0.5s forwards;
+	color: white;
+}
+
+#transport_modal_close_icon {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: rgb(255, 255, 255) !important;
+	cursor: pointer;
+}
+
+#transport_modal_close_icon:hover {
+	color: var(--hover-close-icon-transports) !important;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.transport_url {
+	font-weight: bold;
+}
+
+.transport_titre {
+	font-size: 1.5rem;
+	margin: 10px 0;
+}
+
+.transport_modal_pointer {
+	position: absolute;
+	left: -20px;
+	top: 40%;
+	border: 10px solid var(--bg-card-transport);
+	border-color: transparent var(--bg-card-transport) transparent transparent;
+
+	width: 0px;
+	height: 0px;
+}
+
+.transport_modal_pointer--reversed {
+	transform: rotate(180deg) !important;
+	position: absolute;
+	left: 320px;
+}
+
+
+.transport_icon {
+	width: 70px;
+	margin-right: 5px;
+}
+
+.active-transport {
 	fill: var(--bg-active-ecopoint) !important;
 }
 
