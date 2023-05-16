@@ -51,7 +51,7 @@ function moveModalToCursor(event, modal) {
     }
 
     if (isModalTransportOut) {
-        modalEcopointPointer.classList.add("ecopoint_modal_pointer--reversed");
+        modalEcopointPointer.classList.add("transport_modal_pointer--reversed");
         modal.style.left = `${posX - 400}px`;
     }
 }
@@ -137,7 +137,7 @@ function addEventOnTransports() {
             const circles = transport.getElementsByTagName("circle");
 
             for (let circle of circles) {
-                circle.classList.add("active");
+                circle.classList.add("active-transport");
             }
 
             const { titre } = transports_liste.find((item) => item.id === transport.id);
@@ -195,6 +195,7 @@ function cleanActiveSvg() {
 
     for (let circle of allCircles) {
         circle.classList.remove("active");
+        circle.classList.remove("active-transport");
     }
 
     for (let rect of allRects) {
@@ -214,7 +215,6 @@ closeTransportModale();
 
 
 /* ------------------------------------------------   Panel  ------------------------------------------------ */
-
 function cleanPanelLocation() {
     const allLieuxInterets = document.querySelectorAll("#LIEUX_INTERET")
 
@@ -307,7 +307,6 @@ toggleMapIcons(buttonEcopoints, "ECOPOINTS");
 toggleMapIcons(buttonParcs, "PARC_DE_JEUX");
 toggleMapIcons(buttonParking, "PARKING");
 toggleMapIcons(buttonPromenade, "PROMENADE");
-
 
 addEventOnPanelItems()
 addEventsOnLocation()
