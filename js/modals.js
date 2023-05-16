@@ -67,10 +67,40 @@ function isModalGoingOutOfScreen(modal) {
 
     return false;
 }
-
+//touchstart
 function addEventOnEcopoints() {
     for (let ecopoint of ecopoints) {
         ecopoint.addEventListener("click", (event) => {
+
+            hideModales();
+            cleanActiveSvg();
+
+            const rects = ecopoint.getElementsByTagName("rect");
+
+            for (rect of rects) {
+                rect.classList.add("active-ecopoint");
+            }
+
+            const { id, titre, desc, icons } = ecopoints_liste.find((item) => item.id === ecopoint.id); // /!\ L'id doit être le même entre l'import SVG et la liste .json. (ex: ecopoint15)
+            modal_ecopoint.classList.remove("hide");
+            const modal_titre = modal_ecopoint.querySelector(".ecopoint_titre");
+            const modal_desc = modal_ecopoint.querySelector(".ecopoint_description");
+            const modal_icons = modal_ecopoint.querySelector(".ecopoint_icons");
+
+            modal_titre.textContent = titre;
+            modal_desc.textContent = desc;
+            modal_icons.innerHTML = icons
+                .map((icon) => `<img class="ecopoint_icon" src="./assets/icons/ecopoints/${icon}" alt="${icon.split(".")[0]}">`)
+                .join("");
+
+            moveModalToCursor(event, modal_ecopoint);
+        });
+    }
+}
+
+function addEventOnEcopointsMobile() {
+    for (let ecopoint of ecopoints) {
+        ecopoint.addEventListener("touchstart", (event) => {
 
             hideModales();
             cleanActiveSvg();
@@ -207,8 +237,12 @@ fetchLieuxInterets();
 fetchEcopoints();
 fetchTransports();
 addEventOnLieuxInteret();
+
 addEventOnEcopoints();
+addEventOnEcopointsMobile()
+
 addEventOnTransports();
+
 closeModale();
 closeEcopointModale();
 closeTransportModale();
