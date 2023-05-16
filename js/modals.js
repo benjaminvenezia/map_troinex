@@ -213,8 +213,26 @@ closeModale();
 closeEcopointModale();
 closeTransportModale();
 
-
 /* ------------------------------------------------   Panel  ------------------------------------------------ */
+
+const panel = document.querySelector('#panel');
+const buttonShow = document.querySelector('#container-show-panel');
+const buttonHide = document.querySelector('#container-hide-panel');
+
+buttonHide.addEventListener("click", hidePanel);
+buttonShow.addEventListener("click", showPanel);
+
+function hidePanel() {
+    buttonShow.classList.remove('hide');
+    panel.classList.remove('panel-show');
+    panel.classList.add('panel-hide');
+}
+
+function showPanel() {
+    panel.classList.remove('panel-hide');
+    panel.classList.add('panel-show');
+}
+
 function cleanPanelLocation() {
     const allLieuxInterets = document.querySelectorAll("#LIEUX_INTERET")
 
@@ -308,10 +326,11 @@ toggleMapIcons(buttonParcs, "PARC_DE_JEUX");
 toggleMapIcons(buttonParking, "PARKING");
 toggleMapIcons(buttonPromenade, "PROMENADE");
 
+
+
 addEventOnPanelItems()
 addEventsOnLocation()
 cleanLocationItemsWhenMouseIsLeaving();
-
 
 /* ------------------------------------------------   MAP HELPER  ------------------------------------------------ */
 //A n'activer que pour mettre en évidence les éléments avec la propriété des fichiers json "show" à true
