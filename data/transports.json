@@ -2,7 +2,7 @@
 	{
 		"id": "transport1",
 		"titre": "nom de l'arrêt n°1",
-        "show": true
+        "show": false
 	},
 	{
 		"id": "transport2",

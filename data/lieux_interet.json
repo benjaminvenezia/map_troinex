@@ -18,33 +18,33 @@
     {
       "id": "lieu_interet3",
       "titre": "Salle de fêtes",
-      "desc": "description du lieu d'intêret 3",
+      "desc": "route de Moillebin 20 / RESPONSABLE M. Begdush HADRAJ 079 402 84 37",
       "image": "salle-des-fetes.jpg",
-      "url": "https://troinex.ch/",
+      "url": "https://troinex.ch/votre-mairie/infos-pratiques/autres-services-communaux/",
       "show": false
     },
     {
       "id": "lieu_interet4",
       "titre": "Ecole",
-      "desc": "description du lieu d'intêret 4",
+      "desc": "Place de la Mairie 2 / 022 784 31 04",
       "image": "ecole-2.jpg",
-      "url": "https://troinex.ch/",
+      "url": "https://edu.ge.ch/primaire/ecole/troinex",
       "show": false
     },
     {
       "id": "lieu_interet5",
       "titre": "Eglise catholique",
-      "desc": "description du lieu d'intêret 5",
+      "desc": "Chem. Emile-Dusonchet 4 / 022 784 31 03",
       "image": "eglise.jpg",
-      "url": "https://troinex.ch/",
+      "url": "https://www.eglisecatholique-ge.ch/messes-paroisses/paroisses/paroisse-sainte-marie-madeleine-troinex/",
       "show": false
     },
     {
       "id": "lieu_interet6",
       "titre": "Ferme Rosset et jardin d’enfant",
-      "desc": "description du lieu d'intêret 6",
+      "desc": "La Ferme Rosset est un espace culturel de la commune de Troinex à Genève, Suisse",
       "image": "ferme-rosset-exterieur.jpg",
-      "url": "https://troinex.ch/",
+      "url": "https://www.fermerosset.ch/",
       "show": false
     },
     {
@@ -58,9 +58,9 @@
     {
       "id": "lieu_interet8",
       "titre": "Centre sportif",
-      "desc": "description du lieu d'intêret 8",
+      "desc": "Realsport Group GE SA / Route de Bossey 70 / 022 899 11 45",
       "image": "place-sports-et-jeux.jpg",
-      "url": "https://troinex.ch/",
+      "url": "https://www.realsport.ch/fr/references/troinex-centre-sportif-du-claiset",
       "show": false
     },
     {
@@ -74,17 +74,17 @@
     {
       "id": "lieu_interet10",
       "titre": "Temple protestant",
-      "desc": "description du lieu d'intêret 10",
+      "desc": "Ch. de Saussac 30 / 022 784 31 65",
       "image": "eglise-protestante.png",
-      "url": "https://troinex.ch/",
+      "url": "https://troinex-veyrier.epg.ch/",
       "show": false
     },
     {
       "id": "lieu_interet11",
       "titre": "Eglise Arménienne",
-      "desc": "description du lieu d'intêret 11",
+      "desc": "Rte de Troinex 64/ch. Lullin 2 / 022 300 44 22",
       "image": "eglise-armenienne.jpg",
-      "url": "https://troinex.ch/",
+      "url": "https://troinex.ch/vivre-ici/vie-sociale/eglises/",
       "show": false
     }
   ]
