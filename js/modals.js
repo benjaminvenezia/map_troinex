@@ -51,7 +51,7 @@ function moveModalToCursor(event, modal) {
     }
 
     if (isModalTransportOut) {
-        modalEcopointPointer.classList.add("transport_modal_pointer--reversed");
+        modalTransportsPointer.classList.add("transport_modal_pointer--reversed");
         modal.style.left = `${posX - 400}px`;
     }
 }
