@@ -356,7 +356,7 @@ const buttonPromenade = document.getElementById("btn-promenades");
 
 function toggleMapIcons(buttonDom, listIconsName) {
     buttonDom.addEventListener("click", () => {
-
+    hideModales();
     document.querySelectorAll(`#${listIconsName}`).forEach((icon) => {
             for (const el of icon.children) {
                 el.classList.toggle('hide');
