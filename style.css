@@ -573,6 +573,32 @@ a {
 	color: gray;
 }
 
+@media only screen and (max-width: 992px) {
+	#panel {
+		width: 35vw;
+	}
+
+	.panel-item {
+		margin-bottom: 5px !important;
+	}
+
+	.panel-item span {
+		font-size: 0.900rem !important;
+	}
+
+	.panel-subitem-location {
+		font-size: 0.800rem;
+	}
+
+	#container-hide-panel {
+	
+		right: -20px;
+
+	}
+}
+
+
+
 @media only screen and (max-width: 768px) {
 
 	.graph:before {
@@ -580,14 +606,8 @@ a {
 	}
 
 	#panel {
-		display: flex;
-		justify-content: center;
-		z-index: 2;
-		position: absolute;
-		bottom: 0;
-		top: 40vh;
+		top: 50vh;
 		width: 100vw;
-		background-color: var(--primary);
 	}
 
 	#panel-container {
@@ -647,29 +667,21 @@ a {
 	}
 
 	.ecopoint_modal {
-		position: absolute;
 		top: 20px !important;
 		right: 20px !important;
-		z-index: 100;
-		width: 130px;
-		padding: 5px;
-		background-color: var(--bg-card-ecopoint);
-		border-radius: 10px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.373);
-		animation: fadein 0.5s forwards;
-		color: white;
+		width: 200px;
 	}
 
 	.ecopoint_modal .ecopoint_titre {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 
 	.ecopoint_modal .ecopoint_description {
-		font-size: 0.7rem;
+		font-size: 0.9rem;
 	}
 	
 	.ecopoint_icons img {
-		width: 35px;
+		width: 60px;
 	}
 
 	.ecopoint_modal_pointer {
@@ -685,3 +697,30 @@ a {
 	}
 	
 }
+
+@media only screen and (max-width: 576px) {
+
+	.ecopoint_modal {
+		top: 20px !important;
+		right: 20px !important;
+		width: 130px;
+	}
+
+	.ecopoint_modal .ecopoint_titre {
+		font-size: 1rem;
+	}
+
+	.ecopoint_modal .ecopoint_description {
+		font-size: 0.7rem;
+	}
+
+	.ecopoint_icons img {
+		width: 35px;
+	}
+
+	#panel {
+		top: 40vh;
+		width: 100vw;
+	}
+}
+
