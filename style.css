@@ -458,8 +458,26 @@ a {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1400px) { 
+
+	#container-hide-panel {
+		right: 5px !important;
+	}
+}
+
 @media only screen and (max-width: 1200px) { 
 
+	#container-hide-panel {
+		right: 5px !important;
+	}
+
+	.panel-item-label {
+		font-size: 0.9rem !important;
+	}
+
+	.panel-subitem-location {
+		font-size: 0.8rem !important;
+	}
 }
 
 @media only screen and (max-width: 992px) {
@@ -480,7 +498,7 @@ a {
 	}
 
 	#container-hide-panel {
-		right: -20px;
+		right: -20px !important;
 	}
 
 	.ecopoint_modal {
@@ -563,8 +581,6 @@ a {
 		flex-wrap: wrap;
 	}
 }
-
-
 
 @media only screen and (max-width: 768px) {
 
