@@ -393,8 +393,6 @@ toggleMapIcons(buttonParcs, "PARC_DE_JEUX");
 toggleMapIcons(buttonParking, "PARKING");
 toggleMapIcons(buttonPromenade, "PROMENADE");
 
-
-
 addEventOnPanelItems()
 addEventsOnLocation()
 cleanLocationItemsWhenMouseIsLeaving();
@@ -436,4 +434,9 @@ async function fetchAndShowIcons() {
     await Promise.all([fetchLieuxInterets(), fetchEcopoints(), fetchTransports()]).then(() => {
         fetchIconsSettedToTrue();
     });
+}
+
+function isMobileDevice() {
+	const mediaQuery = window.matchMedia("(max-width: 768px)");
+	return mediaQuery.matches;
 }
