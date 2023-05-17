@@ -458,6 +458,10 @@ a {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1200px) { 
+
+}
+
 @media only screen and (max-width: 992px) {
 	#panel {
 		width: 35vw;
@@ -533,7 +537,31 @@ a {
 	.transport_titre {
 		font-size: 0.850rem;
 	}
+
+
+	.panel-item-extensible-number {
+		background-color: transparent;
+		color: white !important;
+		font-size: 0.70rem !important;
+		margin-right: 1px;
+	}
+
+	.panel-item-extensible-number::after {
+		content: ".";
+	}
 	
+	#panel-container li {
+		list-style: none;
+		margin-bottom: 5px;
+		display: flex;
+		align-items: center;
+	}
+
+	#panel-item-locations ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
 
 
@@ -567,11 +595,7 @@ a {
 		justify-content: center;
 	}
 
-	#panel-item-locations ul {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
+
 
 	.panel-subitem-location {
 		font-size: 0.650rem;
@@ -581,23 +605,7 @@ a {
 		margin-bottom: 0px !important;
 	}
 
-	.panel-item-extensible-number {
-		background-color: transparent;
-		color: white !important;
-		font-size: 0.70rem !important;
-		margin-right: 1px;
-	}
-
-	.panel-item-extensible-number::after {
-		content: ".";
-	}
 	
-	#panel-container li {
-		list-style: none;
-		margin-bottom: 5px;
-		display: flex;
-		align-items: center;
-	}
 
 	.panel-item-label {
 		font-size: 1.4rem !important;	
@@ -620,7 +628,7 @@ a {
 	.ecopoint_icons img {
 		width: 60px;
 	}
-	/* dd */
+	
 	.lieu_interet_modal {
 		width: 250px;
 		right: 20px;
