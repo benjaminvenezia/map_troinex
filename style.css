@@ -595,6 +595,29 @@ a {
 		right: -20px;
 
 	}
+
+	.ecopoint_modal {
+		top: 20px !important;
+		right: 20px !important;
+		width: 200px;
+	}
+
+	#panel {
+		top: 45vh;
+		width: 100vw;
+	}
+
+	#container-hide-panel {
+		display: none;
+	}
+
+	#container-show-panel {
+		display: none;
+	}
+
+	.ecopoint_modal_pointer {
+		display: none;
+	}
 }
 
 
@@ -646,7 +669,7 @@ a {
 		background-color: transparent;
 		color: white !important;
 		font-size: 0.70rem !important;
-		margin-right: -6px;
+		margin-right: 1px;
 	}
 
 	.panel-item-extensible-number::after {
@@ -660,10 +683,8 @@ a {
 		align-items: center;
 	}
 
-	#panel-container li span {
-		font-size: 0.850rem;
-	
-		color: var(--text);
+	.panel-item-label {
+		font-size: 1.4rem !important;	
 	}
 
 	.ecopoint_modal {
@@ -683,19 +704,6 @@ a {
 	.ecopoint_icons img {
 		width: 60px;
 	}
-
-	.ecopoint_modal_pointer {
-		display: none;
-	}
-
-	#container-hide-panel {
-		display: none;
-	}
-
-	#container-show-panel {
-		display: none;
-	}
-	
 }
 
 @media only screen and (max-width: 576px) {
@@ -718,9 +726,22 @@ a {
 		width: 35px;
 	}
 
+	.panel-item-extensible-number {
+		background-color: transparent;
+		color: white !important;
+		font-size: 0.70rem !important;
+		margin-right: -6px;
+	}
+
 	#panel {
 		top: 40vh;
 		width: 100vw;
+	}
+
+	#panel-container li span {
+		font-size: 0.850rem;
+	
+		color: var(--text);
 	}
 }
 
