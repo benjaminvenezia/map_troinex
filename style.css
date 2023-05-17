@@ -575,6 +575,9 @@ a {
 
 @media only screen and (max-width: 768px) {
 
+	.graph:before {
+		padding-top: 86.71% !important;
+	}
 
 	#panel {
 		display: flex;
