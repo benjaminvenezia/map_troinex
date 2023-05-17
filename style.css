@@ -573,6 +573,7 @@ a {
 	color: gray;
 }
 
+
 @media only screen and (max-width: 992px) {
 	#panel {
 		width: 35vw;
@@ -591,15 +592,13 @@ a {
 	}
 
 	#container-hide-panel {
-	
 		right: -20px;
-
 	}
 
 	.ecopoint_modal {
 		top: 20px !important;
 		right: 20px !important;
-		width: 200px;
+		width: 200px !important;
 	}
 
 	#panel {
@@ -607,17 +606,50 @@ a {
 		width: 100vw;
 	}
 
-	#container-hide-panel {
+	#container-show-panel, #container-hide-panel  {
 		display: none;
 	}
 
-	#container-show-panel {
+	.modal_pointer, .ecopoint_modal_pointer, .transport_modal_pointer  {
 		display: none;
 	}
 
-	.ecopoint_modal_pointer {
-		display: none;
+	/* location */
+	.lieu_interet_modal {
+		width: 200px !important;
+		right: 20px;
+		top: 20px;
 	}
+
+	.lieu_interet_image {
+		height: 100px;
+	}
+
+	.lieu_interet_description {
+		font-size: 1rem !important;
+		margin: 2px 0;
+	}
+	
+	.lieu_interet_url {
+		font-size: 0.8rem;
+		font-weight: bold;
+	}
+	
+	.lieu_interet_titre {
+		font-size: 1rem;
+		margin: 5px 0;
+	}
+	/* transports */
+	.transport_modal {
+		width: 200px;
+		right: 20px;
+		top: 20px;
+	}
+
+	.transport_titre {
+		font-size: 0.850rem;
+	}
+	
 }
 
 
@@ -703,6 +735,12 @@ a {
 	
 	.ecopoint_icons img {
 		width: 60px;
+	}
+	/* dd */
+	.lieu_interet_modal {
+		width: 250px;
+		right: 20px;
+		top: 20px;
 	}
 }
 
