@@ -26,7 +26,6 @@
 }
 
 /* map */
-
 body {
 	overflow: hidden;
 	margin: 0;
@@ -49,6 +48,26 @@ body {
 }
 
 /* PANEL */
+/* toggle panel */
+#container-hide-panel, #container-show-panel  {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	padding: 15px;
+	border-radius: 100%;
+}
+
+#container-hide-panel {
+	right: -35px;
+	border: 1px solid white;
+}
+
+#container-show-panel {
+	z-index: 1;
+	left: 20px;
+	background-color: var(--primary);
+}
+
 .panel-hide {
 	transform: translateX(-100vw);
 	transition: 1s;
@@ -59,40 +78,12 @@ body {
 	transition: 1s;
 }
 
-#container-hide-panel {
-	cursor: pointer;
-	position: absolute;
-	top: 20px;
-	right: -35px;
-
-	padding: 15px;
-	border-radius: 100%;
-	border: 1px solid white;
-}
-
-#container-show-panel {
-	cursor: pointer;
-	z-index: 1;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background-color: var(--primary);
-	padding: 15px;
-	border-radius: 100%;
-}
-
-#icon-hide-panel {
+#icon-hide-panel, #icon-show-panel  {
 	fill: white;
 	width: 25px;
 	height: 25px;
 }
-
-#icon-show-panel {
-	fill: white;
-	width: 25px;
-	height: 25px;
-}
-
+/* end toggle panel */
 #panel {
 	display: flex;
 	justify-content: center;
@@ -118,26 +109,20 @@ body {
 	flex-direction: column;
 	justify-content: center;
 }
-
 #panel-container li {
 	cursor: pointer;
-}
-
-#panel-container li:hover {
-	color: var(--text-hover);
-}
-
-#panel-container li {
 	list-style: none;
 	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
 }
-
-#panel-container li span {
+.panel-item-label {
 	font-size: 1.125rem;
-
 	color: var(--text);
+}
+
+#panel-container li:hover {
+	color: var(--text-hover);
 }
 
 .panel-icon-eye-close,
@@ -153,9 +138,6 @@ body {
 
 .panel-icon-more--active {
 	transform: rotate(180deg) !important;
-}
-
-.panel-subitem-location {
 }
 
 .panel-subitem-location--svg circle {
@@ -185,9 +167,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.panel-item {
 }
 
 .panel-item--active {
@@ -245,33 +224,61 @@ a {
 	display: none !important;
 }
 
-/* LIEUX INTERET*/
-.lieu_interet_modal {
+#TRANSPORTS, #ECOPOINTS, #LIEUX_INTERET  {
+	cursor: pointer;
+}
+
+/* modals */
+.modal_pointer--reversed, .ecopoint_modal_pointer--reversed, .transport_modal_pointer--reversed {
+	transform: rotate(180deg) !important;
+	position: absolute;
+	left: 320px;
+}
+
+.lieu_interet_modal, .ecopoint_modal, .transport_modal  {
 	position: absolute;
 	z-index: 100;
 	width: 300px;
 	padding: 10px;
-	background-color: var(--bg-card-lieu_interet);
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.373);
 	animation: fadein 0.5s forwards;
+}
+
+.ecopoint_modal {
+	background-color: var(--bg-card-ecopoint);
+	color: white;
+}
+
+.lieu_interet_modal {
+	background-color: var(--bg-card-lieu_interet);
 	color: var(--color-card-lieu_interet);
 }
 
-#lieu_interet_modal_close_icon {
+.transport_modal {
+	background-color: var(--bg-card-transport);
+	color: white;
+}
+
+#ecopoint_modal_close_icon, #lieu_interet_modal_close_icon {
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	color: var(--icon-close-color-lieux_interet) !important;
 	cursor: pointer;
 }
 
+#ecopoint_modal_close_icon {
+	color: rgb(255, 255, 255) !important;
+}
+#ecopoint_modal_close_icon:hover {
+	color: var(--hover-close-icon-ecopoints) !important;
+}
+
+#lieu_interet_modal_close_icon {
+	color: var(--icon-close-color-lieux_interet) !important;
+}
 #lieu_interet_modal_close_icon:hover {
 	color: var(--hover-close-icon-lieux_interet) !important;
-}
-
-#LIEUX_INTERET {
-	cursor: pointer;
 }
 
 .lieu_interet_image {
@@ -296,15 +303,8 @@ a {
 	top: 48%;
 	border: 10px solid black;
 	border-color: transparent var(--bg-card-lieu_interet) transparent transparent;
-
 	width: 0px;
 	height: 0px;
-}
-
-.modal_pointer--reversed {
-	transform: rotate(180deg) !important;
-	position: absolute;
-	left: 320px;
 }
 
 .active {
@@ -312,43 +312,6 @@ a {
 }
 
 /* ECOPOINTS */
-#ECOPOINTS {
-	cursor: pointer;
-}
-
-.ecopoint_modal {
-	position: absolute;
-	z-index: 1000000;
-	width: 300px;
-	padding: 10px;
-	background-color: var(--bg-card-ecopoint);
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.373);
-	animation: fadein 0.5s forwards;
-	color: white;
-}
-
-#ecopoint_modal_close_icon {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	color: rgb(255, 255, 255) !important;
-	cursor: pointer;
-}
-
-#ecopoint_modal_close_icon:hover {
-	color: var(--hover-close-icon-ecopoints) !important;
-}
-
-@keyframes fadein {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 .ecopoint_url {
 	font-weight: bold;
 }
@@ -369,12 +332,6 @@ a {
 	height: 0px;
 }
 
-.ecopoint_modal_pointer--reversed {
-	transform: rotate(180deg) !important;
-	position: absolute;
-	left: 320px;
-}
-
 .ecopoint_icon {
 	width: 70px;
 	margin-right: 5px;
@@ -385,22 +342,6 @@ a {
 }
 
 /* TRANSPORTS */
-
-#TRANSPORTS {
-	cursor: pointer;
-}
-.transport_modal {
-	position: absolute;
-	z-index: 1000000;
-	width: 300px;
-	padding: 10px;
-	background-color: var(--bg-card-transport);
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.373);
-	animation: fadein 0.5s forwards;
-	color: white;
-}
-
 #transport_modal_close_icon {
 	position: absolute;
 	top: 15px;
@@ -437,15 +378,8 @@ a {
 	top: 40%;
 	border: 10px solid var(--bg-card-transport);
 	border-color: transparent var(--bg-card-transport) transparent transparent;
-
 	width: 0px;
 	height: 0px;
-}
-
-.transport_modal_pointer--reversed {
-	transform: rotate(180deg) !important;
-	position: absolute;
-	left: 320px;
 }
 
 .transport_icon {
@@ -523,57 +457,7 @@ a {
 	stroke: none;
 }
 
-/* btn */
-.btn-zoom {
-	width: 50px;
-	height: 50px;
-	font-size: 3rem;
-	border-radius: 100%;
-	border: none;
-	cursor: pointer;
-}
-
-.btn-filter {
-	width: 100px;
-	height: 50px;
-	margin-bottom: 5px;
-	border: none;
-	cursor: pointer;
-	background-color: rgb(185, 255, 183) !important;
-	font-weight: bold;
-}
-
-#reset-btn {
-	width: 100px;
-	height: 40px;
-	font-size: 2rem;
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-}
-
-#zoom-in-btn {
-	background-color: lightgreen;
-}
-
-#zoom-in-btn:hover {
-	background-color: rgb(191, 238, 191);
-}
-
-#zoom-out-btn {
-	background-color: crimson;
-}
-
-#zoom-out-btn:hover {
-	background-color: rgb(218, 87, 113);
-}
-
-.btn--disabled {
-	background-color: lightgray !important;
-	color: gray;
-}
-
-
+/* RESPONSIVE */
 @media only screen and (max-width: 992px) {
 	#panel {
 		width: 35vw;
