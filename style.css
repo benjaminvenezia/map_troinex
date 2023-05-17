@@ -232,7 +232,7 @@ a {
 .modal_pointer--reversed, .ecopoint_modal_pointer--reversed, .transport_modal_pointer--reversed {
 	transform: rotate(180deg) !important;
 	position: absolute;
-	left: 320px;
+	left: 320px !important;
 }
 
 .lieu_interet_modal, .ecopoint_modal, .transport_modal  {
