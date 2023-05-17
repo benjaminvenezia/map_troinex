@@ -67,7 +67,7 @@ function isModalGoingOutOfScreen(modal) {
 
     return false;
 }
-//touchstart
+
 function addEventOnEcopoints() {
     for (let ecopoint of ecopoints) {
         ecopoint.addEventListener("click", (event) => {
@@ -95,16 +95,10 @@ function addEventOnEcopoints() {
 
             moveModalToCursor(event, modal_ecopoint);
         });
-    }
-}
 
-function addEventOnEcopointsMobile() {
-    for (let ecopoint of ecopoints) {
         ecopoint.addEventListener("touchstart", (event) => {
-
             hideModales();
             cleanActiveSvg();
-
             const rects = ecopoint.getElementsByTagName("rect");
 
             for (rect of rects) {
@@ -155,6 +149,32 @@ function addEventOnLieuxInteret() {
 
             moveModalToCursor(event, modal_lieu_interet);
         });
+
+        lieu.addEventListener("touchstart", (event) => {
+            hideModales();
+            cleanActiveSvg();
+
+            const circles = lieu.getElementsByTagName("circle");
+
+            for (let circle of circles) {
+                circle.classList.add("active");
+            }
+
+            const { titre, desc, image, url } = lieux_interet_liste.find((item) => item.id === lieu.id);
+            
+            modal_lieu_interet.classList.remove("hide");
+            const modal_titre = modal_lieu_interet.querySelector(".lieu_interet_titre");
+            const modal_desc = modal_lieu_interet.querySelector(".lieu_interet_description");
+            const modal_image = modal_lieu_interet.querySelector(".lieu_interet_image");
+            const modal_url = modal_lieu_interet.querySelector(".lieu_interet_url");
+
+            modal_titre.textContent = titre;
+            modal_desc.textContent = desc;
+            modal_image.src = `./assets/images/lieux_interet/${image}`;
+            modal_url.href = url;
+
+            moveModalToCursor(event, modal_lieu_interet);
+        });
     }
 }
 
@@ -176,8 +196,25 @@ function addEventOnTransports() {
             let modal_titre = modal_transport.querySelector(".transport_titre");
 
             modal_titre.textContent = titre;
-            // modal_desc.textContent = desc;
+            moveModalToCursor(event, modal_transport);
+        });
 
+        transport.addEventListener("touchstart", (event) => {
+            hideModales();
+            cleanActiveSvg();
+
+            const circles = transport.getElementsByTagName("circle");
+
+            for (let circle of circles) {
+                circle.classList.add("active-transport");
+            }
+
+            const { titre } = transports_liste.find((item) => item.id === transport.id);
+            
+            modal_transport.classList.remove("hide");
+            let modal_titre = modal_transport.querySelector(".transport_titre");
+
+            modal_titre.textContent = titre;
             moveModalToCursor(event, modal_transport);
         });
     }
@@ -237,12 +274,8 @@ fetchLieuxInterets();
 fetchEcopoints();
 fetchTransports();
 addEventOnLieuxInteret();
-
 addEventOnEcopoints();
-addEventOnEcopointsMobile()
-
 addEventOnTransports();
-
 closeModale();
 closeEcopointModale();
 closeTransportModale();
