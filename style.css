@@ -47,6 +47,10 @@ body {
 	display: block;
 }
 
+.link_modal {
+	color: var(--primary);
+}
+
 /* PANEL */
 /* toggle panel */
 #container-hide-panel, #container-show-panel  {
@@ -459,7 +463,6 @@ a {
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1400px) { 
-
 	#container-hide-panel {
 		right: 5px !important;
 	}
