@@ -15,7 +15,7 @@
         stroke: #ffffff;
         
         stroke-linecap: round;
-        stroke-width: 2px;
+        stroke-width: 1px;
       }
 
       .cls-2 {
@@ -25,7 +25,7 @@
   </defs>
   <g id="Groupe_75" data-name="Groupe 75">
     <path id="Tracé_54" data-name="Tracé 54" class="cls-1" d="m2.02,12.5s4.19,6.2,10.49,6.2,10.48-6.2,10.48-6.2c0,0-4.19-6.2-10.48-6.2S2.02,12.5,2.02,12.5Z"/>
-    <circle class="circle" cx="12.42" cy="12.5" r="4.14"/>
+    <circle class="circle" cx="12.42" cy="12.5" r="3"/>
     <line id="Ligne_2" data-name="Ligne 2" class="cls-2" x1="2.63" y1="19.13" x2="22.22" y2="5.88"/>
   </g>
 </svg>
