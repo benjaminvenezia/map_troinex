@@ -9,7 +9,7 @@ async function fetchData(url) {
     return data;
 }
 
-async function fetchLieuxInterets() { lieux_interet_liste = await fetchData("./data/lieux_interet.json"); }
+async function fetchLocations() { lieux_interet_liste = await fetchData("./data/lieux_interet.json"); }
 async function fetchEcopoints() { ecopoints_liste = await fetchData("./data/ecopoints.json"); }
 async function fetchTransports() { transports_liste = await fetchData("./data/transports.json"); }
 
@@ -138,7 +138,9 @@ function addEventOnEcopoints() {
     }
 }
 
-function addEventOnLieuxInteret() {
+
+
+function addEventOnLocations() {
     for (let lieu of lieux_interet) {
         lieu.addEventListener("click", (event) => {
             hideModales();
@@ -286,10 +288,10 @@ function cleanActiveSvg() {
     }
 }
 
-fetchLieuxInterets();
+fetchLocations();
 fetchEcopoints();
 fetchTransports();
-addEventOnLieuxInteret();
+addEventOnLocations();
 addEventOnEcopoints();
 addEventOnTransports();
 closeModale();
@@ -469,7 +471,7 @@ async function fetchIconsSettedToTrue() {
     return all;
 }
 async function fetchAndShowIcons() {
-    await Promise.all([fetchLieuxInterets(), fetchEcopoints(), fetchTransports()]).then(() => {
+    await Promise.all([fetchLocations(), fetchEcopoints(), fetchTransports()]).then(() => {
         fetchIconsSettedToTrue();
     });
 }
