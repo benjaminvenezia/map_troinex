@@ -82,14 +82,15 @@ body {
 	background-color: var(--primary);
 }
 
+.panel-hide, .panel-show {
+	transition: 1s;
+}
 .panel-hide {
 	transform: translateX(-100vw);
-	transition: 1s;
 }
 
 .panel-show {
 	transform: translateX(0);
-	transition: 1s;
 }
 
 #icon-hide-panel, #icon-show-panel  {
@@ -117,7 +118,7 @@ body {
 }
 
 #panel-ul {
-	height: 100vh;
+	height: 80vh;
 	padding-left: 0;
 	display: flex;
 	flex-direction: column;
@@ -165,16 +166,16 @@ body {
 }
 
 .panel-item-extensible li {
-	margin-bottom: 10px !important;
+	margin-bottom: 5px !important;
 	color: white;
 }
 
 .panel-item-extensible-number {
-	margin-right: 10px;
-	font-size: 1rem !important;
-	font-weight: 700;
-	width: 25px;
-	height: 25px;
+	margin-right: 7px;
+	font-size: 0.7rem !important;
+	font-weight: 500;
+	width: 20px;
+	height: 20px;
 	background-color: white;
 	border-radius: 100%;
 	color: var(--primary) !important;
