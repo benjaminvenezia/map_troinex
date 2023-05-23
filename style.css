@@ -72,8 +72,8 @@ body {
 }
 
 #container-hide-panel {
-	right: -35px;
 	border: 1px solid white;
+	right: 0px;
 }
 
 #container-show-panel {
@@ -106,7 +106,7 @@ body {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 22vw;
+	width: 18vw;
 	background-color: var(--primary);
 }
 
@@ -120,6 +120,7 @@ body {
 #panel-ul {
 	height: 80vh;
 	padding-left: 0;
+	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
