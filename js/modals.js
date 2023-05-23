@@ -147,8 +147,6 @@ function addEventOnEcopoints() {
     }
 }
 
-
-
 function addEventOnLocations() {
     for (let lieu of lieux_interet) {
         lieu.addEventListener("click", (event) => {
@@ -354,7 +352,7 @@ function addEventsOnLocation() {
             cleanPanelLocation();
             const id = locationItem.dataset.locaid;
             const  { titre, desc, image, url }  = lieux_interet_liste.find(el => el.id === id);
-
+           
             const svgLocation = document.getElementById(id);
             const {x, y} = svgLocation.getBoundingClientRect();
             
@@ -362,7 +360,20 @@ function addEventsOnLocation() {
 
             moveLocationModalWithCoords(x, y, modal_lieu_interet);
             svgLocation.classList.add('panel-subitem-location--svg');
+        })
 
+        locationItem.addEventListener("mouseover", (e) => {
+            cleanPanelLocation();
+            const id = locationItem.dataset.locaid;
+            const  { titre, desc, image, url }  = lieux_interet_liste.find(el => el.id === id);
+           
+            const svgLocation = document.getElementById(id);
+            const {x, y} = svgLocation.getBoundingClientRect();
+            
+            fillLocationModal(titre, desc, image, url);
+
+            moveLocationModalWithCoords(x, y, modal_lieu_interet);
+            svgLocation.classList.add('panel-subitem-location--svg');
         })
     })
 }
