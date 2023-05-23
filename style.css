@@ -85,6 +85,7 @@ body {
 .panel-hide, .panel-show {
 	transition: 1s;
 }
+
 .panel-hide {
 	transform: translateX(-100vw);
 }
@@ -128,8 +129,8 @@ body {
 
 .panel-item {
 	margin-bottom: 15px!important;
-
 }
+
 #panel-container li {
 	cursor: pointer;
 	list-style: none;
@@ -509,7 +510,7 @@ a {
 	}
 
 	.panel-item-label {
-		font-size: 0.9rem !important;
+		font-size: 0.9rem;
 	}
 
 	.panel-subitem-location {
@@ -527,11 +528,12 @@ a {
 	}
 
 	.panel-item span {
-		font-size: 0.900rem !important;
+		font-size: 0.900rem;
 	}
 
 	.panel-subitem-location {
 		font-size: 0.800rem;
+		margin-right: 5px;
 	}
 
 	#container-hide-panel {
@@ -597,7 +599,6 @@ a {
 		width: 80vw;
 		padding-left: 0;
 		display: flex;
-
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -609,8 +610,12 @@ a {
 	}
 
 	#panel {
-		top: 50vh;
+		top: 45vh;
 		width: 100vw;
+	}
+
+	.panel-subitem-location {
+		font-size: 0.800rem;
 	}
 
 	#panel-container {
@@ -621,14 +626,8 @@ a {
 		align-items: center;
 	}
 
-	
-
-	.panel-subitem-location {
-		font-size: 0.650rem;
-	}
-
 	.panel-item-label {
-		font-size: 1.4rem !important;	
+		font-size: 0.8rem;	
 	}
 
 	.ecopoint_modal .ecopoint_titre {
@@ -645,7 +644,6 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
-
 	.modal_pointer, .ecopoint_modal_pointer, .transport_modal_pointer  {
 		display: none;
 	}
