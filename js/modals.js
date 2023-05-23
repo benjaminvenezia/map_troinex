@@ -56,6 +56,22 @@ function moveModalToCursor(event, modal) {
     }
 }
 
+function moveLocationModalWithCoords(x, y, modal) {
+    const modalPointer = document.querySelector(".modal_pointer");
+
+    modalPointer.classList.remove("modal_pointer--reversed");
+
+    modal.style.left = `${x + 40}px`;
+    modal.style.top = `${y - modal.offsetHeight / 2}px`;
+
+    const isModalLieuInteretOut = isModalGoingOutOfScreen(modal);
+
+    if (isModalLieuInteretOut) {
+        modalPointer.classList.add("modal_pointer--reversed");
+        modal.style.left = `${posX - 400}px`;
+    }
+}
+
 function isModalGoingOutOfScreen(modal) {
     const { x, y, width, height } = modal.getBoundingClientRect();
     const modalEnd = x + width;
@@ -340,8 +356,30 @@ function addEventsOnLocation() {
         locationItem.addEventListener("mouseover", () => {
             cleanPanelLocation();
             const id = locationItem.dataset.locaid;
-            // const location = lieux_interet_liste.find(el => el.id === id);
             const svgLocation = document.getElementById(id);
+            svgLocation.classList.add('panel-subitem-location--svg');
+        })
+
+        locationItem.addEventListener("click", (e) => {
+            cleanPanelLocation();
+            const id = locationItem.dataset.locaid;
+            const  { titre, desc, image, url }  = lieux_interet_liste.find(el => el.id === id);
+
+            const svgLocation = document.getElementById(id);
+            const {x, y} = svgLocation.getBoundingClientRect();
+            
+            modal_lieu_interet.classList.remove("hide");
+            const modal_titre = modal_lieu_interet.querySelector(".lieu_interet_titre");
+            const modal_desc = modal_lieu_interet.querySelector(".lieu_interet_description");
+            const modal_image = modal_lieu_interet.querySelector(".lieu_interet_image");
+            const modal_url = modal_lieu_interet.querySelector(".lieu_interet_url");
+
+            modal_titre.textContent = titre;
+            modal_desc.textContent = desc;
+            modal_image.src = `./assets/images/lieux_interet/${image}`;
+            modal_url.href = url;
+
+            moveLocationModalWithCoords(x, y, modal_lieu_interet);
             svgLocation.classList.add('panel-subitem-location--svg');
 
         })
