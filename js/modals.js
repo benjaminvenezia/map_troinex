@@ -56,6 +56,19 @@ function moveModalToCursor(event, modal) {
     }
 }
 
+function fillLocationModal(title, desc, image, url) {
+    modal_lieu_interet.classList.remove("hide");
+    const modal_titre = modal_lieu_interet.querySelector(".lieu_interet_titre");
+    const modal_desc = modal_lieu_interet.querySelector(".lieu_interet_description");
+    const modal_image = modal_lieu_interet.querySelector(".lieu_interet_image");
+    const modal_url = modal_lieu_interet.querySelector(".lieu_interet_url");
+
+    modal_titre.textContent = title;
+    modal_desc.textContent = desc;
+    modal_image.src = `./assets/images/lieux_interet/${image}`;
+    modal_url.href = url;
+}
+
 function moveLocationModalWithCoords(x, y, modal) {
     const modalPointer = document.querySelector(".modal_pointer");
 
@@ -77,11 +90,7 @@ function isModalGoingOutOfScreen(modal) {
     const modalEnd = x + width;
     const windowEnd = window.innerWidth;
 
-    if (modalEnd > windowEnd) {
-        return true;
-    }
-
-    return false;
+    return modalEnd > windowEnd
 }
 
 function addEventOnEcopoints() {
@@ -154,17 +163,7 @@ function addEventOnLocations() {
 
             const { titre, desc, image, url } = lieux_interet_liste.find((item) => item.id === lieu.id);
             
-            modal_lieu_interet.classList.remove("hide");
-            const modal_titre = modal_lieu_interet.querySelector(".lieu_interet_titre");
-            const modal_desc = modal_lieu_interet.querySelector(".lieu_interet_description");
-            const modal_image = modal_lieu_interet.querySelector(".lieu_interet_image");
-            const modal_url = modal_lieu_interet.querySelector(".lieu_interet_url");
-
-            modal_titre.textContent = titre;
-            modal_desc.textContent = desc;
-            modal_image.src = `./assets/images/lieux_interet/${image}`;
-            modal_url.href = url;
-
+            fillLocationModal(titre, desc, image, url);
             moveModalToCursor(event, modal_lieu_interet);
         });
 
@@ -178,19 +177,7 @@ function addEventOnLocations() {
                 circle.classList.add("active");
             }
 
-            const { titre, desc, image, url } = lieux_interet_liste.find((item) => item.id === lieu.id);
-            
-            modal_lieu_interet.classList.remove("hide");
-            const modal_titre = modal_lieu_interet.querySelector(".lieu_interet_titre");
-            const modal_desc = modal_lieu_interet.querySelector(".lieu_interet_description");
-            const modal_image = modal_lieu_interet.querySelector(".lieu_interet_image");
-            const modal_url = modal_lieu_interet.querySelector(".lieu_interet_url");
-
-            modal_titre.textContent = titre;
-            modal_desc.textContent = desc;
-            modal_image.src = `./assets/images/lieux_interet/${image}`;
-            modal_url.href = url;
-
+            fillLocationModal(titre, desc, image, url);
             moveModalToCursor(event, modal_lieu_interet);
         });
     }
@@ -351,6 +338,7 @@ function addEventOnPanelItems() {
     })
 }
 
+
 function addEventsOnLocation() {
     const locationItems = document.querySelectorAll('.panel-subitem-location');
 
@@ -370,16 +358,7 @@ function addEventsOnLocation() {
             const svgLocation = document.getElementById(id);
             const {x, y} = svgLocation.getBoundingClientRect();
             
-            modal_lieu_interet.classList.remove("hide");
-            const modal_titre = modal_lieu_interet.querySelector(".lieu_interet_titre");
-            const modal_desc = modal_lieu_interet.querySelector(".lieu_interet_description");
-            const modal_image = modal_lieu_interet.querySelector(".lieu_interet_image");
-            const modal_url = modal_lieu_interet.querySelector(".lieu_interet_url");
-
-            modal_titre.textContent = titre;
-            modal_desc.textContent = desc;
-            modal_image.src = `./assets/images/lieux_interet/${image}`;
-            modal_url.href = url;
+            fillLocationModal(titre, desc, image, url);
 
             moveLocationModalWithCoords(x, y, modal_lieu_interet);
             svgLocation.classList.add('panel-subitem-location--svg');
