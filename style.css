@@ -133,12 +133,12 @@ body {
 #panel-container li {
 	cursor: pointer;
 	list-style: none;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	display: flex;
 	align-items: center;
 }
 .panel-item-label {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	color: var(--text);
 }
 
@@ -159,6 +159,14 @@ body {
 
 .panel-icon-more--active {
 	transform: rotate(180deg) !important;
+}
+
+#container-subitems-location {
+	margin: 0 !important;
+}
+
+.panel-subitem-location {
+	font-size: 0.9rem;
 }
 
 .panel-subitem-location--svg circle {
@@ -480,12 +488,21 @@ a {
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1400px) { 
+
+	#panel {
+		width: 23vw;
+	}
+
 	#container-hide-panel {
 		right: 5px !important;
 	}
 }
 
 @media only screen and (max-width: 1200px) { 
+
+	#panel {
+		width: 24vw;
+	}
 
 	#container-hide-panel {
 		right: 5px !important;
@@ -556,16 +573,12 @@ a {
 	}
 
 	.panel-item-extensible-number {
-		background-color: transparent;
-		color: white !important;
-		font-size: 0.70rem !important;
-		margin-right: 1px;
+		width: 15px;
+		height: 15px;
+		font-size: 0.7rem !important;
+		margin-right: 5px !important;
 	}
 
-	.panel-item-extensible-number::after {
-		content: ".";
-	}
-	
 	#panel-container li {
 		list-style: none;
 		margin-bottom: 5px;
@@ -577,6 +590,16 @@ a {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+	}
+
+	#panel-ul {
+		height: 100%;
+		width: 80vw;
+		padding-left: 0;
+		display: flex;
+
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -598,22 +621,10 @@ a {
 		align-items: center;
 	}
 
-	#panel-ul {
-		height: 100%;
-		width: 80vw;
-		padding-left: 0;
-		display: flex;
-
-		flex-direction: column;
-		justify-content: center;
-	}
+	
 
 	.panel-subitem-location {
 		font-size: 0.650rem;
-	}
-
-	.panel-item-extensible {
-		margin-bottom: 0px !important;
 	}
 
 	.panel-item-label {
@@ -661,13 +672,6 @@ a {
 
 	.ecopoint_icons img {
 		width: 35px;
-	}
-
-	.panel-item-extensible-number {
-		background-color: transparent;
-		color: white !important;
-		font-size: 0.70rem !important;
-		margin-right: -6px;
 	}
 
 	#panel {
