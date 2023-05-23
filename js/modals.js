@@ -347,8 +347,8 @@ function addEventsOnLocation() {
             const svgLocation = document.getElementById(id);
             svgLocation.classList.add('panel-subitem-location--svg');
         })
-
-        locationItem.addEventListener("click", (e) => {
+ 
+        locationItem.addEventListener("mouseover", (e) => {
             cleanPanelLocation();
             const id = locationItem.dataset.locaid;
             const  { titre, desc, image, url }  = lieux_interet_liste.find(el => el.id === id);
@@ -362,7 +362,7 @@ function addEventsOnLocation() {
             svgLocation.classList.add('panel-subitem-location--svg');
         })
 
-        locationItem.addEventListener("mouseover", (e) => {
+        locationItem.addEventListener("touchstart", (e) => {
             cleanPanelLocation();
             const id = locationItem.dataset.locaid;
             const  { titre, desc, image, url }  = lieux_interet_liste.find(el => el.id === id);
