@@ -20,6 +20,7 @@ async function fetchTransports() { transports_liste = await fetchData("./data/tr
 const lieux_interet = document.querySelector("#LIEUX_INTERET").children;
 const ecopoints = document.querySelector("#ECOPOINTS").children;
 const transports = document.querySelector("#TRANSPORTS").children;
+const promenades = document.querySelector("#PROMENADES").children;
 
 const modal_lieu_interet = document.querySelector(".lieu_interet_modal");
 const modal_ecopoint = document.querySelector(".ecopoint_modal");
@@ -377,7 +378,6 @@ function addEventOnPanelItems() {
     })
 }
 
-
 function addEventsOnLocation() {
     const locationItems = document.querySelectorAll('.panel-subitem-location');
 
@@ -427,6 +427,15 @@ const buttonPromenade = document.getElementById("btn-promenades");
 
 function toggleMapIcons(buttonDom, listIconsName) {
     buttonDom.addEventListener("click", () => {
+
+    const promenadesLabels = document.querySelectorAll('.promenade');
+    
+    if(buttonDom.id === "btn-promenades") {
+        for (const prom of promenadesLabels) {
+            prom.classList.toggle('hide');
+        }
+    }
+
     hideModales();
     document.querySelectorAll(`#${listIconsName}`).forEach((icon) => {
             for (const el of icon.children) {
@@ -466,10 +475,10 @@ toggleMapIcons(buttonParcs, "PARC_DE_JEUX");
 toggleMapIcons(buttonParking, "PARKING");
 toggleMapIcons(buttonPromenade, "PROMENADE");
 
+
 addEventOnPanelItems()
 addEventsOnLocation()
 cleanLocationItemsWhenMouseIsLeaving();
-
 
 /*****************************************************************************************************
  *                                              HELPER (dev)

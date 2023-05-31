@@ -275,11 +275,6 @@ a {
 	animation: fadein 0.5s forwards;
 }
 
-.ecopoint_modal {
-	background-color: var(--bg-card-ecopoint);
-	color: white;
-}
-
 .lieu_interet_modal {
 	background-color: var(--bg-card-lieu_interet);
 	color: var(--color-card-lieu_interet);
@@ -288,20 +283,6 @@ a {
 .transport_modal {
 	background-color: var(--bg-card-transport);
 	color: white;
-}
-
-#ecopoint_modal_close_icon, #lieu_interet_modal_close_icon {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	cursor: pointer;
-}
-
-#ecopoint_modal_close_icon {
-	color: rgb(255, 255, 255) !important;
-}
-#ecopoint_modal_close_icon:hover {
-	color: var(--hover-close-icon-ecopoints) !important;
 }
 
 #lieu_interet_modal_close_icon {
@@ -341,7 +322,27 @@ a {
 	fill: var(--bg-active-lieux_interet) !important;
 }
 
+
 /* ECOPOINTS */
+.ecopoint_modal {
+	background-color: var(--bg-card-ecopoint);
+	color: white;
+}
+
+#ecopoint_modal_close_icon, #lieu_interet_modal_close_icon {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+
+#ecopoint_modal_close_icon {
+	color: rgb(255, 255, 255) !important;
+}
+#ecopoint_modal_close_icon:hover {
+	color: var(--hover-close-icon-ecopoints) !important;
+}
+
 .ecopoint_url {
 	font-weight: bold;
 }
