@@ -175,6 +175,8 @@ function addEventOnLocations() {
                 circle.classList.add("active");
             }
 
+            const { titre, desc, image, url } = lieux_interet_liste.find((item) => item.id === lieu.id);
+
             fillLocationModal(titre, desc, image, url);
             moveModalToCursor(event, modal_lieu_interet);
         });
