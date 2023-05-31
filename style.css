@@ -516,6 +516,7 @@ a {
 	.panel-subitem-location {
 		font-size: 0.8rem !important;
 	}
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -602,6 +603,10 @@ a {
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	.button-container {
+		top: 40%;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -640,6 +645,10 @@ a {
 	
 	.ecopoint_icons img {
 		width: 60px;
+	}
+
+	.button-container {
+		top: 35%;
 	}
 }
 
@@ -681,6 +690,10 @@ a {
 		font-size: 0.850rem;
 	
 		color: var(--text);
+	}
+
+	.button-container {
+		top: 35%;
 	}
 }
 
