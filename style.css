@@ -589,12 +589,6 @@ a {
 		align-items: center;
 	}
 
-	#panel-item-locations ul {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
 	#panel-ul {
 		height: 100%;
 		width: 80vw;
@@ -606,6 +600,14 @@ a {
 
 	.button-container {
 		top: 40%;
+	}
+
+	#panel-item-locations {
+		align-items: flex-start !important;
+	}
+
+	#container-subitems-location {
+		flex-direction: column !important;
 	}
 }
 
