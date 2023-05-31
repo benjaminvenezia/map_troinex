@@ -348,7 +348,7 @@ function addEventsOnLocation() {
             svgLocation.classList.add('panel-subitem-location--svg');
         })
  
-        locationItem.addEventListener("mouseover", (e) => {
+        locationItem.addEventListener("click", (e) => {
             cleanPanelLocation();
             const id = locationItem.dataset.locaid;
             const  { titre, desc, image, url }  = lieux_interet_liste.find(el => el.id === id);
