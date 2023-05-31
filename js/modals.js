@@ -1,4 +1,8 @@
-/* ------------------------------------------------   MAP   ------------------------------------------------ */
+
+/*****************************************************************************************************
+ *                                              MAP
+ *****************************************************************************************************/
+
 let lieux_interet_liste;
 let ecopoints_liste;
 let transports_liste;
@@ -20,6 +24,39 @@ const transports = document.querySelector("#TRANSPORTS").children;
 const modal_lieu_interet = document.querySelector(".lieu_interet_modal");
 const modal_ecopoint = document.querySelector(".ecopoint_modal");
 const modal_transport = document.querySelector(".transport_modal");
+
+
+function hoverOnMapIcons() {
+    for (const ecop of ecopoints) {
+        ecop.addEventListener('mouseenter', () => {
+          ecop.classList.add('fill-ecopoint');
+       })
+    
+       ecop.addEventListener('mouseleave', () => {
+        ecop.classList.remove('fill-ecopoint');
+     })
+    }
+    
+    for (const loc of lieux_interet) {
+        loc.addEventListener('mouseenter', () => {
+          loc.classList.add('fill-location');
+       })
+    
+       loc.addEventListener('mouseleave', () => {
+        loc.classList.remove('fill-location');
+     })
+    }
+    
+    for (const trans of transports) {
+        trans.addEventListener('mouseenter', () => {
+          trans.classList.add('fill-transport');
+       })
+    
+       trans.addEventListener('mouseleave', () => {
+        trans.classList.remove('fill-transport');
+     })
+    }
+}
 
 function moveModalToCursor(event, modal) {
     const modalPointer = document.querySelector(".modal_pointer");
@@ -285,8 +322,10 @@ closeModale();
 closeEcopointModale();
 closeTransportModale();
 
-/* ------------------------------------------------   Panel  ------------------------------------------------ */
 
+/*****************************************************************************************************
+ *                                              PANEL
+ *****************************************************************************************************/
 const panel = document.querySelector('#panel');
 const buttonShow = document.querySelector('#container-show-panel');
 const buttonHide = document.querySelector('#container-hide-panel');
@@ -413,6 +452,8 @@ function cleanLocationItemsWhenMouseIsLeaving() {
     })
 }
 
+hoverOnMapIcons();
+
 hideByDefaultMapIcons("TRANSPORTS");
 hideByDefaultMapIcons("PARC_DE_JEUX");
 hideByDefaultMapIcons("PARKING");
@@ -429,8 +470,11 @@ addEventOnPanelItems()
 addEventsOnLocation()
 cleanLocationItemsWhenMouseIsLeaving();
 
-/* ------------------------------------------------   MAP HELPER  ------------------------------------------------ */
-//A n'activer que pour mettre en évidence les éléments avec la propriété des fichiers json "show" à true
+
+/*****************************************************************************************************
+ *                                              HELPER (dev)
+ *****************************************************************************************************/
+//A n'activer que pour cibler les éléments avec la propriété des fichiers json "show" à 'true'
 
 fetchAndShowIcons();
 
@@ -472,3 +516,6 @@ function isMobileDevice() {
 	const mediaQuery = window.matchMedia("(max-width: 768px)");
 	return mediaQuery.matches;
 }
+
+
+

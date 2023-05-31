@@ -17,7 +17,7 @@
 
 	--bg-active-ecopoint: rgb(0, 88, 21);
 	--bg-active-lieux_interet: #005082;
-	--bg-active-transport: #411f00;
+	--bg-active-transport: #442c15;
 
 	--icon-close-color-lieux_interet: rgb(255, 255, 255);
 
@@ -699,3 +699,17 @@ a {
 	}
 }
 
+.fill-ecopoint rect {
+	transition: .3s;
+	fill: var(--bg-active-ecopoint) !important;
+}
+
+.fill-location circle {
+	transition: .3s;
+	fill: var(--bg-active-lieux_interet) !important;
+}
+
+.fill-transport circle {
+	transition: .3s;
+	fill: var(--bg-active-transport) !important;
+}
